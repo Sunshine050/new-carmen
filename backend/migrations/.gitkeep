@@ -1,0 +1,2 @@
+# Database migrations will be stored here
+# Use: make migrate-create name=migration_name
