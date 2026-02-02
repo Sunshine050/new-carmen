@@ -54,9 +54,13 @@ dateCreated: "2026-02-02T06:14:10.615Z"
 
 <img src="/public/del_icon.png" style="display: inline-block;" /> การลบ Budget
 
-<p style="margin: 0;">Video ประกอบ</p>
-<h3 style="margin: 0;">Budget | การบันทึกงบประมาณ</h3>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DobgUMZ6_EE?si=pD9WSwOqgFEOuxdY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Video ประกอบ
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/td1iJu4ifzs?si=ETT6j7SwTXGrIV6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Budget | การบันทึกงบประมาณ
+
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=DobgUMZ6_EE)
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=td1iJu4ifzs)

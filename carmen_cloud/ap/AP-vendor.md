@@ -106,9 +106,13 @@ AutoPay Information
 6. เมื่อระบบทำการบันทึกข้อมูลเรียบร้อยแล้ว ระบบจะแสดงข้อความ Success และให้กดปุ่ม OK
 ![alt text](image-124.png)
 
-<p style="margin: 0;">Video ประกอบ</p>
-<h3 style="margin: 0;">Vendor Profile | การสร้างทะเบียนเจ้าหนี้</h3>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UxqNS-B6QjA?si=RZeQQv4RsmboU2_B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Video ประกอบ
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ehsdGhm58D0?si=mcZR8p_srYOkAJ4j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Vendor Profile | การสร้างทะเบียนเจ้าหนี้
+
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=UxqNS-B6QjA)
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=ehsdGhm58D0)

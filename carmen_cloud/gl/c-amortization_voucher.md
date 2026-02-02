@@ -113,10 +113,12 @@ Function นี้ใช้เพื่อสร้างแม่แบบเ�
 
 4.3 กดปุ่ม <img src="/public/print_icon.svg" style="display: inline-block;" /> เพื่อพิมพ์ข้อมูล
 
-<p style="margin: 0;">Video ประกอบ</p>
+
+## Video ประกอบ
+
 <h5 style="margin: 0;">Amortization Voucher | การสร้างใบสำคัญบันทึกบัญชีแบบตั้งค่าตัดจำหน่ายตามระยะเวลา
 </h5>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QZHfIB1hFa4?si=aVvrRHq2aDDbc4eE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+- [Watch on YouTube](https://www.youtube.com/watch?v=QZHfIB1hFa4)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xuAYQVXXMeI?si=X6JRw5ZJZSw2JtSi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+- [Watch on YouTube](https://www.youtube.com/watch?v=xuAYQVXXMeI)

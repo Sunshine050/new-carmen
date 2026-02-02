@@ -200,12 +200,16 @@ Function ที่ใช้ในกรณี ต้องการเพิ่�
 8.	เมื่อตรวจสอบเรียบร้อยแล้ว click "print" เพื่อสั่งพิมพ์เอกสาร
 ![alt text](image-158.png)
 
-<p style="margin: 0;">Video ประกอบ</p>
-<h3 style="margin: 0;">Input Vat Reconciliation | การตรวจสอบรายการใบกำกับภาษีซื้อ</h3>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9VefhfqbF1A?si=qDpprUdG2-2Z0hD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Video ประกอบ
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sV4VCwWPUFM?si=PSM2pVFLbhEuVlpu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+
+### Input Vat Reconciliation | การตรวจสอบรายการใบกำกับภาษีซื้อ
+
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=9VefhfqbF1A)
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=sV4VCwWPUFM) 
 
 <!-- # Input Tax Reconciliation
 
@@ -340,9 +344,13 @@ Function ที่ใช้ในกรณี ต้องการเพิ่�
     <img src="./image-50.png" />
 </p>
 
-<p style="margin: 0;">Video ประกอบ</p>
-<h3 style="margin: 0;">Input Vat Reconciliation | การตรวจสอบรายการใบกำกับภาษีซื้อ</h3>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9VefhfqbF1A?si=qDpprUdG2-2Z0hD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Video ประกอบ
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sV4VCwWPUFM?si=PSM2pVFLbhEuVlpu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+### Input Vat Reconciliation | การตรวจสอบรายการใบกำกับภาษีซื้อ
+
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=9VefhfqbF1A)
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=sV4VCwWPUFM) -->

@@ -245,12 +245,16 @@ Depreciation Mapping Acc. Code
 ตัวอย่าง JV สำหรับการบันทึกบัญชีค่าเสื่อมราคาจากการ Posting Asset to GL
 ![alt text](image-77.png)
 
-<p style="margin: 0;">Video ประกอบ</p>
-<h3 style="margin: 0;">Asset Registration | การลงทะเบียนสินทรัพย์</h3>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hnREj9whgUc?si=MqybJ9QImp5b_-g9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Video ประกอบ
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/p0GvQwEjajU?si=1rd57v3N4-jWAk50" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Asset Registration | การลงทะเบียนสินทรัพย์
+
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=hnREj9whgUc)
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=p0GvQwEjajU)
 
 
 
@@ -333,12 +337,16 @@ Asset Account กำหนดรหัส Department Code และ Account Code
     <img src="./image-13.png" />
 </p>
 
-<p style="margin: 0;">Video ประกอบ</p>
-<h3 style="margin: 0;">Asset Registration | การลงทะเบียนสินทรัพย์</h3>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hnREj9whgUc?si=MqybJ9QImp5b_-g9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Video ประกอบ
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/p0GvQwEjajU?si=1rd57v3N4-jWAk50" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Asset Registration | การลงทะเบียนสินทรัพย์
+
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=hnREj9whgUc)
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=p0GvQwEjajU)
 
 
 
@@ -403,12 +411,16 @@ Asset Account กำหนดรหัส Department Code และ Account Code
     <img src="./image-20.png" />
 </p>
 
-<p style="margin: 0;">Video ประกอบ</p>
-<h3 style="margin: 0;">Asset Registration | การลงทะเบียนสินทรัพย์หลายชิ้นในคราวเดียว</h3>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2T6wIdPu_Kg?si=oGA4fRIEoMjna4iM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Video ประกอบ
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gqy1ZRfSOEI?si=Gnf2EctmQcBytItX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Asset Registration | การลงทะเบียนสินทรัพย์หลายชิ้นในคราวเดียว
+
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=2T6wIdPu_Kg)
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=gqy1ZRfSOEI)
 
 
 ## การบันทึกสินทรัพย์โดยใช้ข้อมูลจาก Pre-Register Asset

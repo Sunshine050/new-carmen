@@ -51,9 +51,13 @@ dateCreated: "2026-02-02T06:14:10.617Z"
 
 7. หากต้องการเปิด Period ให้ FC, Account Manger หรือผู้มีอำนาจส่ง E-Mail ถึง Support เพื่อทำการขอเปิด Period
 
-<p style="margin: 0;">Video ประกอบ</p>
-<h3 style="margin: 0;">Year Ending | การปิดปีบัญชี</h3>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-8mV5Mkb2yk?si=wPnP1OMqwQldKfic" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Video ประกอบ
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Diet4ICD8ek?si=mMFTbPXa9T3jaIn0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Year Ending | การปิดปีบัญชี
+
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=-8mV5Mkb2yk)
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=Diet4ICD8ek)

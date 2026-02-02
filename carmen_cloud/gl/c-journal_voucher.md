@@ -71,12 +71,16 @@ Journal Voucher คือ สมุดบัญชีรายวัน มี�
     <img src="./image-4.png"  />
 </p>
 
-<p style="margin: 0;">Video ประกอบ</p>
-<h3 style="margin: 0;">Journal Voucher | การสร้างใบสำคัญบันทึกบัญชี</h3>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1l56IQeyTPI?si=cprMY0-VDohZqRe3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Video ประกอบ
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/udlQspommVs?si=LAQ1ekfrQGphES0H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Journal Voucher | การสร้างใบสำคัญบันทึกบัญชี
+
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=1l56IQeyTPI)
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=udlQspommVs)
 
 ## การสร้าง Journal Voucher โดย Copy
 
@@ -184,12 +188,16 @@ Journal Voucher คือ สมุดบัญชีรายวัน มี�
 <p align="center">
     <img src="./image-15.png"  />
 </p>
-<p style="margin: 0;">Video ประกอบ</p>
-<h3 style="margin: 0;">Copy Function on JV | การใช้คำสั่ง Copy ในการสร้างใบสำคัญบันทึกบัญชี</h3>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/G2GIeVFl_h4?si=EFRHIwDQ-bdRBJ3e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Video ประกอบ
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BRHHf8oPddk?si=-FDUaNTyTworhkBe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Copy Function on JV | การใช้คำสั่ง Copy ในการสร้างใบสำคัญบันทึกบัญชี
+
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=G2GIeVFl_h4)
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=BRHHf8oPddk)
 
 ## การสร้าง Journal Voucher จาก Template
 
@@ -237,11 +245,13 @@ Journal Voucher คือ สมุดบัญชีรายวัน มี�
 
 1.3. กดปุ่ม <img src="/public/print_icon.svg" style="display: inline-block;" /> เพื่อพิมพ์เอกสาร Journal Voucher
 
-<p style="margin: 0;">Video ประกอบ</p>
+
+## Video ประกอบ
+
 <h5 style="margin: 0;">Create and Apply Template Voucher | การสร้างเทมเพลทใบสำคัญบันทึกบัญชีและการนำไปใช้
 </h5>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8Ns4pX7l-JI?si=UTR98KtbWwuBCwdK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+- [Watch on YouTube](https://www.youtube.com/watch?v=8Ns4pX7l-JI)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GepvvkmLdkM?si=KfrNyft48yzSU5Wc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+- [Watch on YouTube](https://www.youtube.com/watch?v=GepvvkmLdkM)
 

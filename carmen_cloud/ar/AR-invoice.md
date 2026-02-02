@@ -126,12 +126,16 @@ Function นี้ใช้ในกรณีที่ต้องการค�
     <img src="./image-6.png"  />
 </p>
 
-<p style="margin: 0;">Video ประกอบ</p>
-<h3 style="margin: 0;">Invoice | การสร้างใบแจ้งหนี้</h3>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dQvEjdwqyKU?si=mSuRF8mQ1cr1AB-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Video ประกอบ
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZyFCorDnveI?si=VUoY1FpC3d3bMRsc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Invoice | การสร้างใบแจ้งหนี้
+
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=dQvEjdwqyKU)
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=ZyFCorDnveI)
 
 ## การสร้าง A/R Invoice จาก Folio
 
@@ -201,13 +205,15 @@ Function นี้ใช้ในกรณีที่ต้องการค�
     <img src="./image-6.png"  />
 </p>
 
-<p style="margin: 0;">Video ประกอบ</p>
+
+## Video ประกอบ
+
 <h4 style="margin: 0;">Create Invoice from City Ledger Folio | การสร้างใบแจ้งหนี้จาก City Ledger Folio
 </h4>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RHG6VKRfZGs?si=QxATeH6P5_NNKvk1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+- [Watch on YouTube](https://www.youtube.com/watch?v=RHG6VKRfZGs)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CWstCiInqnc?si=tWIQILx343lOSfbV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+- [Watch on YouTube](https://www.youtube.com/watch?v=CWstCiInqnc)
 
 ## การสร้างใบลดหนี้ CN
 

@@ -76,9 +76,13 @@ D = Payment Description D: คือ description ของ Payment
     <img src="./image-73.png" />
 </p>
 
-<p style="margin: 0;">Video ประกอบ</p>
-<h3 style="margin: 0;">Posting from Other Modules | การบันทึกรายการบัญชีจากส่วนงานอื่น ๆ</h3>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Cs2i3cUqduM?si=aCVRFuxzd0jPKj8r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Video ประกอบ
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_0at6R984hI?si=RNv2DTqUIAsYy4re" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Posting from Other Modules | การบันทึกรายการบัญชีจากส่วนงานอื่น ๆ
+
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=Cs2i3cUqduM)
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=_0at6R984hI)

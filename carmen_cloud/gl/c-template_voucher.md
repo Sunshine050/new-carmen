@@ -74,13 +74,15 @@ Function นี้ใช้เพื่อสร้างแม่แบบเ�
 
 <img src="/public/print_icon.svg" style="display: inline-block;" /> พิมพ์เอกสาร
 
-<p style="margin: 0;">Video ประกอบ</p>
+
+## Video ประกอบ
+
 <h5 style="margin: 0;">Create and Apply Template Voucher | การสร้างเทมเพลทใบสำคัญบันทึกบัญชีและการนำไปใช้
 </h5>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8Ns4pX7l-JI?si=UTR98KtbWwuBCwdK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+- [Watch on YouTube](https://www.youtube.com/watch?v=8Ns4pX7l-JI)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GepvvkmLdkM?si=7qLM2guRF3yL2RQq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+- [Watch on YouTube](https://www.youtube.com/watch?v=GepvvkmLdkM)
 
 ## การสร้าง Template จากการ Copy บนหน้าจอ Journal Voucher
 

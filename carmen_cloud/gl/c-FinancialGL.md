@@ -54,11 +54,15 @@ B.Balance Sheet (งบดุล หรือ งบแสดงฐานะท�
 1.9 Click “Save” เพื่อบันทึก หรือ “Cancel” เพื่อยกเลิก
 ![alt text](image-98.png)
 
-<p style="margin: 0;">Video ประกอบ</p>
-<h3 style="margin: 0;">การ mapping ผังบัญชีกับงบการเงิน</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EEXq1d23n58?si=NA5q0VOZWKMkyKI_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UVNkjjrdhdw?si=lkYDU2zVnnj0zIZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Video ประกอบ
+
+
+### การ mapping ผังบัญชีกับงบการเงิน
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=EEXq1d23n58)
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=UVNkjjrdhdw)
 
 2. ขั้นตอนการดูรายงาน “Balance Sheet”
 
@@ -99,11 +103,15 @@ B.Balance Sheet (งบดุล หรือ งบแสดงฐานะท�
 2.6 ระบบจะแสดงรายงานตามรูปแบบมาตรฐานของระบบ และแสดงจำนวนเงินตามการ mapping “Account Code” ที่กำหนดไว้ 
 ![alt text](image-102.png)
 
-<p style="margin: 0;">Video ประกอบ</p>
-<h3 style="margin: 0;">การดูงบดุล</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PksI0Rg6sog?si=H0Gta55XGON4QtF1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_Id6jYLIXmg?si=Mrwaw00VAvaf-or8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Video ประกอบ
+
+
+### การดูงบดุล
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=PksI0Rg6sog)
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=_Id6jYLIXmg)
 
 3. ขั้นตอนการดูรายงาน “Profit and Loss”
 
@@ -142,11 +150,15 @@ B.Balance Sheet (งบดุล หรือ งบแสดงฐานะท�
 3.6 ระบบจะแสดงรายงานตามรูปแบบมาตรฐานของระบบ และแสดงจำนวนเงินตามการ mapping “Account Code” ที่กำหนดไว้
 ![alt text](image-106.png)
 
-<p style="margin: 0;">Video ประกอบ</p>
-<h3 style="margin: 0;">การดูงบกำไรขาดทุน</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BczkO99PT7E?si=FJncfLlSQiEfco2N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1DGcJbGJH6g?si=APeru4hmt3MIhh9q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>   
+## Video ประกอบ
+
+
+### การดูงบกำไรขาดทุน
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=BczkO99PT7E) 
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=1DGcJbGJH6g)   
 
 4. Function อื่น ๆ เพิ่มเติมดังนี้
   - Click ที่ “Expand” เพื่อแสดงรายละเอียดจำนวนเงินแยกตาม Account Code ที่ map เอาไว้ของทุกบรรทัด หรือ “Collapse” เพื่อย่อรายงานกลับมาเป็นแบบ Summary

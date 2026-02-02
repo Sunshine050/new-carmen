@@ -81,7 +81,11 @@ A/P Invoice (Copy)
 •	เมื่อระบบทำการบันทึกข้อมูลเรียบร้อยแล้ว จะขึ้นหน้าต่างแสดงข้อความ Success ให้ Click “OK”
 ![alt text](image-130.png)
 
-<p style="margin: 0;">Video ประกอบ</p>
-<h3 style="margin: 0;">Invoice | การสร้างใบแจ้งหนี้</h3>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/R69tQPAHvvQ?si=PBx7dNUed3E9i6Cb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Video ประกอบ
+
+
+### Invoice | การสร้างใบแจ้งหนี้
+
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=R69tQPAHvvQ)

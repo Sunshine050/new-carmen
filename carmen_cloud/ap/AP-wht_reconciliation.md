@@ -129,12 +129,16 @@ o	ออกให้ครั้งเดียว
 หมายเหตุ : 
 รายการที่เพิ่มเข้ามาจากฟังก์ชันนี้ เพื่อให้แสดงรายการใน แบบฟอร์ม รายงานภาษี หัก ณ ที่จ่ายเท่านั้น ไม่มีส่วนที่เกี่ยวข้องกับ Payment ในระบบ และไม่เกี่ยวข้องกับการบันทึกบัญชีใน General Ledger Module
 
-<p style="margin: 0;">Video ประกอบ</p>
-<h3 style="margin: 0;">Withholding Tax Reconciliation | การตรวจสอบภาษีหัก ณ ที่จ่าย</h3>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0sT1E-a-yGQ?si=hJrJv1bhSRzmHRSo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Video ประกอบ
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MvQBNtYNVkU?si=YcaHroTWfOCIfFnL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+
+### Withholding Tax Reconciliation | การตรวจสอบภาษีหัก ณ ที่จ่าย
+
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=0sT1E-a-yGQ)
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=MvQBNtYNVkU) 
 
 
 
@@ -294,9 +298,13 @@ E การ Export ข้อมูลภาษีหัก ณ ที่จ่�
 
 รายการที่เพิ่มเข้ามาจากฟังก์ชันนี้ เพื่อให้แสดงรายการใน แบบฟอร์ม รายงานภาษี หัก ณ ที่จ่ายเท่านั้น ไม่มีส่วนที่เกี่ยวข้องกับ Payment ในระบบ และไม่เกี่ยวข้องกับการบันทึกบัญชีใน General Ledger Module
 
-<p style="margin: 0;">Video ประกอบ</p>
-<h3 style="margin: 0;">Withholding Tax Reconciliation | การตรวจสอบภาษีหัก ณ ที่จ่าย</h3>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0sT1E-a-yGQ?si=hJrJv1bhSRzmHRSo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+## Video ประกอบ
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MvQBNtYNVkU?si=YcaHroTWfOCIfFnL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+### Withholding Tax Reconciliation | การตรวจสอบภาษีหัก ณ ที่จ่าย
+
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=0sT1E-a-yGQ)
+
+- [Watch on YouTube](https://www.youtube.com/watch?v=MvQBNtYNVkU) -->

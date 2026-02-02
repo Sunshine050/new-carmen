@@ -40,12 +40,14 @@ dateCreated: "2026-02-02T06:14:10.551Z"
     <img src="./image-35.png" />
 </p>
 
-<p style="margin: 0;">Video ประกอบ</p>
+
+## Video ประกอบ
+
 <h4 style="margin: 0;">Disposal Asset | การขาย หรือ ตัดจำหน่ายทรัพย์สินพร้อมบันทึกบัญชีตัดจำหน่าย</h4>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hPNbGS4j_00?si=I15pteF_4LEzfbhC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+- [Watch on YouTube](https://www.youtube.com/watch?v=hPNbGS4j_00)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JSpAREaSbK4?si=8zufaGhoDkz0fR4V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+- [Watch on YouTube](https://www.youtube.com/watch?v=JSpAREaSbK4)
 
 ## การตัดจำหน่ายสินทรัพย์ที่ Asset Register
 
