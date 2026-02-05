@@ -1,4 +1,4 @@
-name: Sync wiki-content into main
+name: Sync wiki-content into main (carmen_cloud only)
 
 on:
   push:
@@ -20,19 +20,23 @@ jobs:
           git config user.name "CI Sync Bot"
           git config user.email "ci-sync@example.com"
 
-      - name: Ensure main is up to date
+      - name: Update main branch
         run: |
           git fetch origin main
           git checkout main
           git reset --hard origin/main
 
-      - name: Merge wiki-content into main
+      - name: Sync carmen_cloud from wiki-content
         run: |
           git fetch origin wiki-content
 
-          # merge ครั้งแรกต้อง allow unrelated histories
-          # หลังจากนั้น history จะเชื่อมกันเอง
-          git merge origin/wiki-content --allow-unrelated-histories -m "chore: sync wiki-content into main"
+          # ดึงเฉพาะโฟลเดอร์ carmen_cloud จาก wiki-content
+          git checkout origin/wiki-content -- carmen_cloud
+
+          git add carmen_cloud
+
+          # ถ้าไม่มีการเปลี่ยนแปลง จะไม่ commit
+          git commit -m "docs: sync carmen_cloud from wiki-content" || echo "No changes to commit"
 
       - name: Push changes to main
         run: |
