@@ -1,0 +1,25 @@
+node_modules/
+frontend/**/node_modules/
+
+# Backend temp and wiki clones
+backend/tmp/
+backend/tmp/**
+backend/wiki-content/
+
+# Environment / secrets
+.env
+.env.*
+backend/.env
+backend/.env.*
+frontend/.env
+frontend/.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
+NUL
+
