@@ -10,29 +10,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repository (full history)
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Merge wiki-content into main
+      - name: Configure Git
         run: |
           git config user.name "CI Sync Bot"
           git config user.email "ci-sync@example.com"
 
-          # Ensure we are on main and up to date
-          git checkout main
+      - name: Ensure main is up to date
+        run: |
           git fetch origin main
+          git checkout main
           git reset --hard origin/main
 
-          # Fetch latest wiki-content
+      - name: Merge wiki-content into main
+        run: |
           git fetch origin wiki-content
 
-          # Merge wiki-content into main
-          # ใช้ --allow-unrelated-histories รอบแรกเพราะ main กับ wiki-content เคยเป็น history คนละสายกัน
-          # หลังจาก merge ครั้งแรกแล้ว history จะเชื่อมกัน การรันครั้งต่อ ๆ ไปจะเป็น merge ปกติ
-          git merge --allow-unrelated-histories origin/wiki-content
+          # merge ครั้งแรกต้อง allow unrelated histories
+          # หลังจากนั้น history จะเชื่อมกันเอง
+          git merge origin/wiki-content --allow-unrelated-histories -m "chore: sync wiki-content into main"
 
-          # Push updated main back to GitHub
+      - name: Push changes to main
+        run: |
           git push origin main
-
