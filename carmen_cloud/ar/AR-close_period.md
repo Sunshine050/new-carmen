@@ -2,15 +2,15 @@
 title: Close Period AR
 description: Close Period For Account Receivable Module
 published: true
-date: 2026-02-23T05:01:10.945Z
+date: 2026-02-23T05:01:49.532Z
 tags: carmen_cloud,documentation
 editor: markdown
 dateCreated: 2026-02-02T06:53:25.025Z
 ---
 
 ---
-title: "Folio"
-weight: 14
+title: "Close Period"
+weight: 15
 ---
 
 
