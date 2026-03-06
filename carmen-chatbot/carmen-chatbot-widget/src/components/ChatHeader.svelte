@@ -4,13 +4,9 @@
 
     let {
         title = "",
-        rooms = [],
-        currentRoomId = "",
-        isExpanded = false,
-        showDropdown = $bindable(false),
+        activeView = "chat",
+        on_toggle_history,
         on_create_new,
-        on_switch_room,
-        on_confirm_delete,
         on_expand_toggle,
         on_close,
         on_drag_start,
@@ -40,14 +36,15 @@
         onmousedown={(e) => e.stopPropagation()}
         ontouchstart={(e) => e.stopPropagation()}
     >
-        <RoomDropdown
-            {rooms}
-            {currentRoomId}
-            bind:showDropdown
-            {on_create_new}
-            {on_switch_room}
-            {on_confirm_delete}
-        />
+        <!-- svelte-ignore a11y_click_events_have_key_events -->
+        <div
+            class="icon-btn"
+            class:active={activeView === "history"}
+            title="ประวัติการสนทนา"
+            onclick={on_toggle_history}
+        >
+            {@html ICONS.history}
+        </div>
 
         <!-- svelte-ignore a11y_click_events_have_key_events -->
         <div
@@ -174,6 +171,10 @@
         width: 22px !important;
         height: 22px !important;
         fill: white !important;
+    }
+    .icon-btn.active {
+        background: rgba(255, 255, 255, 0.3) !important;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1) !important;
     }
 
     @media (max-width: 768px) {

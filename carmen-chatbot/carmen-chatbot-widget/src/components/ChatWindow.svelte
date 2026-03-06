@@ -1,5 +1,6 @@
 <script>
     import { onMount, tick } from "svelte";
+    import { fade } from "svelte/transition";
     import { ICONS } from "../lib/icons.js";
     import { STRINGS, SUGGESTED_QUESTIONS } from "../lib/constants.js";
     import { formatMessageContent } from "../lib/content-formatter.js";
@@ -8,6 +9,7 @@
     import AlertOverlay from "./AlertOverlay.svelte";
     import ChatHeader from "./ChatHeader.svelte";
     import ChatInput from "./ChatInput.svelte";
+    import HistoryScreen from "./HistoryScreen.svelte";
 
     let {
         api,
@@ -52,13 +54,17 @@
     let showWelcome = $state(true);
     let currentImageBase64 = $state(null);
     let isClosing = $state(false);
+    let switchingRoom = $state(false);
+    let activeView = $state("chat"); // 'chat' or 'history'
+    let lastSmoothScrollTime = 0;
 
-    let chatBodyEl;
+    let chatBodyEl = $state();
     let chatBoxEl;
-    let chatInputComp;
+    let chatInputComp = $state();
     const roomKey = "carmen_current_room";
     let closeTimeout = null;
     let userHasScrolledUp = $state(false);
+    let lastProgrammaticScrollTime = 0;
 
     onMount(async () => {
         await loadRoomList();
@@ -72,112 +78,113 @@
                 chatBoxEl.style.right = pos.right;
             } catch (e) {}
         }
+    });
 
-        // Track user scroll to detect manual scroll-up
-        if (chatBodyEl) {
-            // Wheel up = user wants to read older messages
-            chatBodyEl.addEventListener(
-                "wheel",
-                (e) => {
-                    if (e.deltaY < 0) {
-                        userHasScrolledUp = true;
-                    }
-                },
-                { passive: true },
-            );
+    // Reactive scroll & mutation management (Re-binds when chatBodyEl changes)
+    $effect(() => {
+        if (chatBodyEl && activeView === "chat") {
+            const handleScroll = () => {
+                // Ignore scroll events during programmatic scrolls
+                if (Date.now() - lastProgrammaticScrollTime < 500) return;
 
-            // Touch scroll detection
-            let touchStartY = 0;
-            chatBodyEl.addEventListener(
-                "touchstart",
-                (e) => {
-                    touchStartY = e.touches[0].clientY;
-                },
-                { passive: true },
-            );
-            chatBodyEl.addEventListener(
-                "touchmove",
-                (e) => {
-                    if (e.touches[0].clientY > touchStartY) {
-                        userHasScrolledUp = true;
-                    }
-                },
-                { passive: true },
-            );
+                const distanceFromBottom =
+                    chatBodyEl.scrollHeight -
+                    chatBodyEl.scrollTop -
+                    chatBodyEl.clientHeight;
 
-            // When user scrolls back to bottom, re-enable auto-scroll
-            chatBodyEl.addEventListener(
-                "scroll",
-                () => {
-                    if (isProgrammaticScroll) return;
-                    const distanceFromBottom =
-                        chatBodyEl.scrollHeight -
-                        chatBodyEl.scrollTop -
-                        chatBodyEl.clientHeight;
-                    if (distanceFromBottom < 80) {
-                        userHasScrolledUp = false;
-                    }
-                },
-                { passive: true },
-            );
+                // Threshold to show "Scroll to Bottom" button (15px)
+                if (distanceFromBottom > 15) {
+                    userHasScrolledUp = true;
+                } else if (distanceFromBottom < 5) {
+                    userHasScrolledUp = false;
+                }
+            };
 
-            // Watch for newly added images and re-scroll when they load
-            const observer = new MutationObserver((mutations) => {
-                for (const mutation of mutations) {
-                    for (const node of mutation.addedNodes) {
-                        if (node.nodeType === 1) {
-                            const el = /** @type {Element} */ (node);
-                            const imgs =
-                                el.tagName === "IMG"
-                                    ? [el]
-                                    : el.querySelectorAll("img") || [];
-                            for (const img of imgs) {
-                                const imgEl = /** @type {HTMLImageElement} */ (
-                                    img
-                                );
-                                if (!imgEl.complete) {
-                                    img.addEventListener(
-                                        "load",
-                                        () => scrollToBottom(),
-                                        { once: true },
-                                    );
-                                }
-                            }
-                        }
-                    }
+            // Detect user interaction to pause auto-scroll
+            const userInteractionHandler = () => {
+                const distanceFromBottom =
+                    chatBodyEl.scrollHeight -
+                    chatBodyEl.scrollTop -
+                    chatBodyEl.clientHeight;
+                if (distanceFromBottom > 5) {
+                    userHasScrolledUp = true;
+                }
+            };
+
+            chatBodyEl.addEventListener("scroll", handleScroll, {
+                passive: true,
+            });
+            chatBodyEl.addEventListener("wheel", userInteractionHandler, {
+                passive: true,
+            });
+            chatBodyEl.addEventListener("touchstart", userInteractionHandler, {
+                passive: true,
+            });
+
+            // Watch for images/content changes to re-scroll
+            const observer = new MutationObserver(() => {
+                if (!userHasScrolledUp) {
+                    scrollToBottom(false, true); // Instant scroll for content updates
                 }
             });
             observer.observe(chatBodyEl, { childList: true, subtree: true });
+
+            return () => {
+                chatBodyEl.removeEventListener("scroll", handleScroll);
+                chatBodyEl.removeEventListener("wheel", userInteractionHandler);
+                chatBodyEl.removeEventListener(
+                    "touchstart",
+                    userInteractionHandler,
+                );
+                observer.disconnect();
+            };
         }
     });
 
     let isProgrammaticScroll = false;
     let autoScrollInterval = null;
 
-    function scrollToBottom(force = false) {
-        if (chatBodyEl) {
-            tick().then(() => {
-                if (force || !userHasScrolledUp) {
-                    isProgrammaticScroll = true;
-                    chatBodyEl.scrollTop = chatBodyEl.scrollHeight;
-                    requestAnimationFrame(() => {
-                        isProgrammaticScroll = false;
-                    });
-                }
-            });
+    function scrollToBottom(force = false, instant = false) {
+        if (!chatBodyEl) return;
+
+        if (force) {
+            userHasScrolledUp = false;
         }
+
+        tick().then(() => {
+            if (force || !userHasScrolledUp) {
+                lastProgrammaticScrollTime = Date.now();
+                const targetScrollTop =
+                    chatBodyEl.scrollHeight - chatBodyEl.clientHeight;
+
+                if (Math.abs(chatBodyEl.scrollTop - targetScrollTop) < 2)
+                    return;
+
+                if (instant) {
+                    const originalSmooth = chatBodyEl.style.scrollBehavior;
+                    chatBodyEl.style.scrollBehavior = "auto";
+                    chatBodyEl.scrollTop = Math.ceil(targetScrollTop);
+                    chatBodyEl.style.scrollBehavior = originalSmooth;
+                } else {
+                    chatBodyEl.scrollTop = Math.ceil(targetScrollTop);
+                }
+            }
+        });
     }
 
-    // Start a throttled auto-scroll during streaming (every 300ms)
     function startAutoScroll() {
         if (autoScrollInterval) return;
+        // Faster interval (50ms) for snappy auto-scroll during streaming
         autoScrollInterval = setInterval(() => {
-            if (!userHasScrolledUp && chatBodyEl) {
-                isProgrammaticScroll = true;
-                chatBodyEl.scrollTop = chatBodyEl.scrollHeight;
-                requestAnimationFrame(() => {
-                    isProgrammaticScroll = false;
-                });
+            if (activeView === "chat" && !userHasScrolledUp && chatBodyEl) {
+                const distanceFromBottom =
+                    chatBodyEl.scrollHeight -
+                    chatBodyEl.scrollTop -
+                    chatBodyEl.clientHeight;
+
+                if (distanceFromBottom > 5) {
+                    scrollToBottom(false, true); // Instant scroll during streaming
+                }
             }
         }, 50);
     }
@@ -298,30 +305,79 @@
     // 🏠 Room Management
     // ==========================================
     async function loadRoomList() {
-        rooms = await api.getRooms();
+        const rawRooms = await api.getRooms();
+        // Enrich with last message snippets
+        rooms = await Promise.all(
+            rawRooms.map(async (room) => {
+                try {
+                    const history = await api.getRoomHistory(room.room_id);
+                    const lastMsg =
+                        history.messages && history.messages.length > 0
+                            ? history.messages[history.messages.length - 1]
+                            : null;
+
+                    let snippet = "ไม่มีข้อความ";
+                    if (lastMsg) {
+                        snippet = lastMsg.message;
+                        // Clean up markdown/tags if any for the snippet
+                        snippet = snippet.replace(/[#*`]/g, "").trim();
+                        if (snippet.length > 300)
+                            snippet = snippet.substring(0, 300) + "...";
+                    }
+
+                    return { ...room, lastMessage: snippet };
+                } catch (e) {
+                    return { ...room, lastMessage: "ไม่มีข้อความ" };
+                }
+            }),
+        );
+    }
+
+    function toggleHistory() {
+        if (activeView === "chat") {
+            activeView = "history";
+            loadRoomList(); // Refresh when opening
+        } else {
+            activeView = "chat";
+        }
     }
 
     async function createNewChat() {
+        switchingRoom = true;
+        activeView = "chat";
+        await tick(); // Ensure chatBodyEl is bound
         messageQueue = [];
+        messages = [];
+        userHasScrolledUp = false;
         if (currentRoomId) {
             await api.clearHistory(currentRoomId);
         }
         currentRoomId = null;
         localStorage.removeItem(roomKey);
-        messages = [];
-        userHasScrolledUp = false;
         showWelcome = true;
         await loadRoomList();
+        scrollToBottom(true, true);
+        switchingRoom = false;
     }
 
     async function switchRoom(roomId) {
+        if (currentRoomId === roomId) {
+            activeView = "chat";
+            return;
+        }
+        switchingRoom = true;
+        activeView = "chat";
+        await tick(); // Ensure chatBodyEl is bound
         messageQueue = [];
-        if (currentRoomId === roomId) return;
+        messages = [];
+        userHasScrolledUp = false;
         currentRoomId = roomId;
         localStorage.setItem(roomKey, roomId);
         showDropdown = false;
         await loadHistory(roomId);
         await loadRoomList();
+        scrollToBottom(true, true);
+        switchingRoom = false;
     }
 
     async function loadHistory(roomId) {
@@ -401,7 +457,7 @@
         // Ensure room exists
         if (!currentRoomId) {
             const roomTitle =
-                msgText.substring(0, 30) + (msgText.length > 30 ? "..." : "");
+                msgText.substring(0, 256) + (msgText.length > 256 ? "..." : "");
             const newRoom = await api.createRoom(bu, username, roomTitle);
             currentRoomId = newRoom.room_id;
             localStorage.setItem(roomKey, currentRoomId);
@@ -668,78 +724,111 @@
     >
         <AlertOverlay bind:showAlert bind:alertData />
 
-        <ChatHeader
-            {title}
-            {rooms}
-            {currentRoomId}
-            {isExpanded}
-            bind:showDropdown
-            on_create_new={createNewChat}
-            on_switch_room={switchRoom}
-            on_confirm_delete={confirmDeleteRoom}
-            on_expand_toggle={handleExpandToggle}
-            on_close={handleClose}
-            on_drag_start={handleDragStart}
-        />
+        {#if activeView === "chat"}
+            <div
+                class="view-wrapper"
+                in:fade={{ duration: 250 }}
+                out:fade={{ duration: 200 }}
+            >
+                <ChatHeader
+                    {title}
+                    {activeView}
+                    on_toggle_history={toggleHistory}
+                    on_create_new={createNewChat}
+                    on_expand_toggle={handleExpandToggle}
+                    on_close={handleClose}
+                    on_drag_start={handleDragStart}
+                />
 
-        <div class="chat-body" id="carmenChatBody" bind:this={chatBodyEl}>
-            {#if showWelcome && messages.length === 0}
-                <WelcomeScreen on_suggestion_click={handleSuggestionClick} />
-            {/if}
+                <div class="chat-body-container">
+                    <div
+                        class="chat-body"
+                        id="carmenChatBody"
+                        bind:this={chatBodyEl}
+                    >
+                        {#if showWelcome && messages.length === 0}
+                            <WelcomeScreen
+                                on_suggestion_click={handleSuggestionClick}
+                            />
+                        {/if}
 
-            {#each messages as msg}
-                {#if msg.isQueued && msg.sender === "bot"}
-                    <!-- Queued bot placeholder -->
-                    <div class="msg bot-msg queued-indicator-container">
-                        <div class="queued-status-text">
-                            🕐 {msg.statusText || "รอคิว..."}
-                        </div>
+                        {#each messages as msg}
+                            {#if msg.isQueued && msg.sender === "bot"}
+                                <!-- Queued bot placeholder -->
+                                <div
+                                    class="msg bot-msg queued-indicator-container"
+                                >
+                                    <div class="queued-status-text">
+                                        🕐 {msg.statusText || "รอคิว..."}
+                                    </div>
+                                </div>
+                            {:else if msg.isStreaming && !msg.message}
+                                <div
+                                    class="msg bot-msg typing-indicator-container"
+                                >
+                                    <div class="typing-status-text">
+                                        {msg.statusText || "... "}
+                                    </div>
+                                    <div class="typing-dots">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                </div>
+                            {:else}
+                                <MessageBubble
+                                    sender={msg.sender}
+                                    message={msg.message}
+                                    msgId={msg.id}
+                                    sources={msg.sources}
+                                    {apiBase}
+                                    isStreaming={msg.isStreaming}
+                                    isQueued={msg.isQueued}
+                                    isError={msg.isError || false}
+                                    timestamp={msg.timestamp}
+                                    on_feedback={handleFeedback}
+                                    on_retry={msg.isError
+                                        ? () => handleRetry(msg.errorText)
+                                        : null}
+                                />
+                            {/if}
+                        {/each}
                     </div>
-                {:else if msg.isStreaming && !msg.message}
-                    <div class="msg bot-msg typing-indicator-container">
-                        <div class="typing-status-text">
-                            {msg.statusText || "..."}
-                        </div>
-                        <div class="typing-dots">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </div>
-                {:else}
-                    <MessageBubble
-                        sender={msg.sender}
-                        message={msg.message}
-                        msgId={msg.id}
-                        sources={msg.sources}
-                        {apiBase}
-                        isStreaming={msg.isStreaming}
-                        isQueued={msg.isQueued}
-                        isError={msg.isError || false}
-                        timestamp={msg.timestamp}
-                        on_feedback={handleFeedback}
-                        on_retry={msg.isError
-                            ? () => handleRetry(msg.errorText)
-                            : null}
-                    />
-                {/if}
-            {/each}
 
-            <!-- Scroll to bottom button -->
-            {#if userHasScrolledUp}
-                <button
-                    class="scroll-to-bottom-btn"
-                    onclick={() => scrollToBottom(true)}
-                    title="เลื่อนลงล่างสุด"
-                >
-                    ⬇
-                </button>
-            {/if}
-        </div>
+                    <!-- Scroll to bottom button moved out of scroll container flow -->
+                    {#if userHasScrolledUp && !switchingRoom}
+                        <button
+                            class="scroll-to-bottom-btn"
+                            transition:fade={{ duration: 200 }}
+                            onclick={() => scrollToBottom(true, true)}
+                            title="เลื่อนลงล่างสุด"
+                        >
+                            {@html ICONS.arrowDownMinimal}
+                        </button>
+                    {/if}
+                </div>
 
-        <ChatInput
-            bind:inputText
-            bind:this={chatInputComp}
-            on_send={() => sendMessage()}
-        />
+                <ChatInput
+                    bind:inputText
+                    bind:this={chatInputComp}
+                    on_send={() => sendMessage()}
+                />
+            </div>
+        {:else if activeView === "history"}
+            <div
+                class="view-wrapper"
+                in:fade={{ duration: 250 }}
+                out:fade={{ duration: 200 }}
+            >
+                <HistoryScreen
+                    {rooms}
+                    {currentRoomId}
+                    {isExpanded}
+                    on_switch_room={switchRoom}
+                    on_create_new={createNewChat}
+                    on_confirm_delete={confirmDeleteRoom}
+                    on_close={toggleHistory}
+                />
+            </div>
+        {/if}
     </div>
 </div>
 
@@ -818,9 +907,18 @@
         display: flex !important;
         flex-direction: column !important;
         min-width: 0 !important;
-        height: 100% !important;
-        background: transparent !important;
         position: relative !important;
+    }
+
+    .view-wrapper {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        z-index: 10 !important;
     }
 
     /* Chat Body */
@@ -843,6 +941,7 @@
         flex-direction: column !important;
         gap: 20px !important;
         scroll-behavior: smooth !important;
+        overscroll-behavior: contain !important;
     }
 
     /* Queued Indicator inside Chat Body */
@@ -997,10 +1096,19 @@
         }
     }
 
+    .chat-body-container {
+        flex: 1 !important;
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: 0 !important;
+        min-width: 0 !important;
+    }
+
     /* Scroll to bottom button */
     .scroll-to-bottom-btn {
-        position: sticky !important;
-        bottom: 12px !important;
+        position: absolute !important;
+        bottom: 16px !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
         width: 36px !important;
@@ -1020,7 +1128,6 @@
         font-size: 16px !important;
         z-index: 50 !important;
         transition: all 0.2s !important;
-        animation: fadeInUp 0.3s ease !important;
         margin: 0 auto !important;
     }
     .scroll-to-bottom-btn:hover {

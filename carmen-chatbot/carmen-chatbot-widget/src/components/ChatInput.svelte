@@ -111,20 +111,6 @@
         fill: white !important;
     }
 
-    .icon-btn-footer {
-        background: transparent !important;
-        border: none !important;
-        color: var(--text-gray) !important;
-        cursor: pointer !important;
-        transition: 0.2s !important;
-        display: flex !important;
-        align-items: center !important;
-    }
-    .icon-btn-footer:hover {
-        color: var(--primary-color) !important;
-        transform: scale(1.1) !important;
-    }
-
     @media (max-width: 768px) {
         .chat-footer {
             padding: 12px 16px !important;
@@ -140,10 +126,6 @@
         .chat-input {
             font-size: 16px !important;
             min-height: 48px !important;
-        }
-        .icon-btn-footer {
-            width: 44px !important;
-            height: 44px !important;
         }
     }
 </style>
