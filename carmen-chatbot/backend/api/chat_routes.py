@@ -44,6 +44,20 @@ async def chat_endpoint(request: Request, req: ChatRequest):
     )
 
 # ==========================================
+# ⭐ 2.5 FEEDBACK (Like / Dislike)
+# ==========================================
+from pydantic import BaseModel
+class FeedbackRequest(BaseModel):
+    score: int
+
+@router.post("/feedback/{msg_id}", summary="Submit feedback for a message")
+async def submit_feedback(msg_id: str, req: FeedbackRequest):
+    # Currently just a dummy endpoint to prevent 404 errors from the widget. 
+    # Can be wired to a database to save the score later.
+    print(f"Feedback received for message {msg_id}: score {req.score}")
+    return {"status": "ok", "msg_id": msg_id, "score": req.score}
+
+# ==========================================
 # 🧹 3. CLEAR CHAT HISTORY (In-Memory)
 # ==========================================
 @router.delete("/clear/{room_id}", summary="Clear in-memory chat history for a room")

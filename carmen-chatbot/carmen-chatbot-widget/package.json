@@ -1,28 +1,17 @@
 {
   "name": "carmen-chatbot-widget",
-  "version": "1.0.13",
-  "description": "Carmen Chatbot Widget for Enterprise",
-  "private": false,
-  "main": "./dist/carmen-widget.umd.js",
-  "module": "./dist/carmen-widget.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/carmen-widget.es.js",
-      "require": "./dist/carmen-widget.umd.js"
-    }
-  },
-  "files": [
-    "dist",
-    "README.md"
-  ],
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && copy dist\\carmen-widget.js ..\\..\\frontend\\user\\public\\carmen-widget.js",
+    "build": "vite build",
     "preview": "vite preview"
   },
-  "author": "FirstBJ",
-  "license": "MIT",
   "devDependencies": {
-    "vite-plugin-css-injected-by-js": "^3.5.2"
+    "@sveltejs/vite-plugin-svelte": "^6.2.1",
+    "svelte": "^5.45.2",
+    "vite": "^7.3.1",
+    "vite-plugin-css-injected-by-js": "^4.0.1"
   }
 }

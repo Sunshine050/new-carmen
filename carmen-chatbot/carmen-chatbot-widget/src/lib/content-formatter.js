@@ -118,11 +118,16 @@ function processImages(str, cleanApiBase) {
 // ==========================================
 
 function processLinks(str) {
-    const urlRegex = /(https?:\/\/(?:www\.)?(?:youtube\.com|youtu\.be)[^\s<)"']+)/g;
+    // 1. Markdown Links [text](url)
+    const mdLinkRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+    str = str.replace(mdLinkRegex, '<a href="$2" target="_blank" class="carmen-link">$1</a>');
+
+    // 2. Bare URLs
+    const urlRegex = /(https?:\/\/[^\s<)"']+)/g;
     str = str.replace(urlRegex, (match, p1, offset, fullString) => {
-        const prefix = fullString.substring(Math.max(0, offset - 10), offset);
-        if (/src=['"]$|href=['"]$|>$/.test(prefix)) return match;
-        return `<a href="${match}" target="_blank" style="color:#2563eb; text-decoration:underline;">${match}</a>`;
+        const prefix = fullString.substring(Math.max(0, offset - 15), offset);
+        if (/src=['"]?$|href=['"]?$|>$/.test(prefix)) return match;
+        return `<a href="${match}" target="_blank" class="carmen-link">${match}</a>`;
     });
     return str;
 }

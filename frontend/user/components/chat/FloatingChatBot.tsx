@@ -12,13 +12,13 @@ export default function FloatingChatBot() {
     const script = document.createElement("script");
     script.src = "/carmen-widget.js";
     script.async = true;
-    
+
     // Pass configuration parameters as required by the widget
     script.setAttribute("data-bu", "global");
     script.setAttribute("data-user", "Guest"); // Or dynamically set based on auth wrapper
-    
+
     // Point to the backend API base url
-    const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080";
+    const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL || (typeof window !== "undefined" ? `${window.location.protocol}//${window.location.hostname}:8080` : "http://localhost:8080");
     script.setAttribute("data-api-base", apiBaseUrl);
 
     document.body.appendChild(script);

@@ -161,10 +161,12 @@ export function MarkdownRender({ content, category }: MarkdownRenderProps) {
 
             const cleanSrc = src.replace("./", "");
 
+            const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL || (typeof window !== "undefined" ? `${window.location.protocol}//${window.location.hostname}:8080` : "http://localhost:8080");
+
             return (
               <img
                 {...props}
-                src={`http://localhost:8080/wiki-assets/${category}/${cleanSrc}`}
+                src={`${apiBaseUrl}/wiki-assets/${category}/${cleanSrc}`}
                 alt={alt}
                 className="block rounded-xl my-6 shadow-md max-w-full"
               />

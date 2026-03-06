@@ -10,7 +10,7 @@ export const SUGGESTED_QUESTIONS = [
     "กดปุ่ม refresh ใน workbook ไม่ได้ ทำยังไง",
     "บันทึกใบกำกับภาษีซื้อ ใน excel แล้ว import ได้หรือไม่",
     "program carmen สามารถ upload file เข้า program RDPrep ของสรรพากรได้ หรือไม่",
-    "ฉันสามารถสร้าง ใบเสร็จรับเงิน โดยไม่เลือก Tax Invoice ได้หรือไม่",
+    "ฉันสามารถสร้าง ใบเสร็จรับเงิน โดยไม่เลือก Invoice ได้หรือไม่",
     "ฉันสามารถบันทึก JV โดยที่ debit และ credit ไม่เท่ากันได้หรือไม่"
 ];
 

@@ -1,4 +1,3 @@
-
 package middleware
 
 import (
@@ -8,11 +7,9 @@ import (
 
 func CORS() fiber.Handler {
 	return cors.New(cors.Config{
-		AllowOriginsFunc: func(origin string) bool {
-			return true // Development: allow all origins
-		},
+		AllowOrigins:     "*",
 		AllowMethods:     "GET,POST,PUT,DELETE,PATCH,OPTIONS",
-		AllowHeaders:     "Origin,Content-Type,Accept,Authorization",
+		AllowHeaders:     "Origin,Content-Type,Accept,Authorization,Cache-Control,Connection",
 		AllowCredentials: true,
 	})
 }

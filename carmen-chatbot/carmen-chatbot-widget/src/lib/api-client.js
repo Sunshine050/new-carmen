@@ -174,11 +174,8 @@ export class ChatService {
     async clearHistory(roomId) {
         try {
             if (!roomId) return;
-            const headers = {};
-
             await fetch(`${this.baseUrl}/api/chat/clear/${roomId}`, {
-                method: 'DELETE',
-                headers
+                method: 'DELETE'
             });
         } catch (e) {
             console.warn("ClearHistory API Error:", e);
